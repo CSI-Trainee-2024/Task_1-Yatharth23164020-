@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+</head>
+
+<style>
+    * {
+        margin: 0;
+    }
+
+    .inner-banner {
+        overflow: hidden;
+        background: url("assets/photo_2024-10-05_16-11-20.jpg");
+        padding: 2em 0;
+        text-align: center;
+        background-repeat: no-repeat;
+        background-position: bottom center;
+        background-size: cover;
+        min-width: auto;
+        min-height: 300px;
+        position: relative;
+        background-attachment: fixed;
+
+    }
+
+
+    .auto-container {
+        position: static;
+        max-width: 1200px;
+        padding: 0px 15px;
+        margin: 0 auto;
+    }
+
+    .inner-banner .inner {
+        position: relative;
+        display: block;
+        max-width: 800px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        z-index: 5;
+    }
+
+    .inner-banner .inner .subtitle {
+        top: 30%;
+        position: relative;
+        text-transform: uppercase;
+        font-weight: 700;
+        color: white;
+        font-size: 2em;
+        letter-spacing: 0.4em;
+        margin-bottom: 1em;
+        margin-top: 3em;
+    }
+
+    .inner-banner .pattern-image {
+        width: 100px;
+        margin: 0 auto;
+    }
+
+    img {
+        display: inline-block;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .inner-banner .inner h1 {
+        position: relative;
+        color: white;
+        font-weight: 400;
+        font: size 1rem;
+        ;
+        text-transform: none;
+        line-height: 1em;
+        margin: 0px 0px;
+    }
+
+    .separation {
+        height: 7px;
+        background-color: rgb(46, 44, 44);
+        position: relative;
+        z-index: 20;
+    }
+
+    nav {
+        z-index: 1;
+        position: sticky;
+        display: flex;
+        justify-content: space-evenly;
+        padding: 12px 12px;
+        align-items: center;
+        background-color: rgba(128, 128, 128, 0.441);
+        border-radius: 12px;
+        margin-top: 5px;
+        width: 100%;
+
+    }
+
+    nav img {
+        width: 50px;
+        border-radius: 16px;
+    }
+
+    .nav-links {
+        flex: 1;
+        /* align-items: center; */
+    }
+
+    .nav-links ul li {
+        list-style: none;
+        display: inline-block;
+        padding: 12px 23px;
+        position: relative;
+        left: 130px;
+    }
+
+    .nav-links ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 1.3rem;
+        font-family: 'Josefin Sans', sans-serif;
+    }
+
+    .nav-links ul li::after {
+        content: '';
+        width: 0%;
+        height: 2px;
+        background: #bf0404;
+        display: block;
+        margin: auto;
+        transition: 0.5s;
+    }
+
+    .nav-links ul li:hover::after {
+        width: 100%;
+    }
+
+
+
+    .campus {
+        /* display: flex;
+    flex-direction: row-reverse; */
+        width: 80%;
+        margin: auto;
+        text-align: center;
+        padding-top: 99px;
+        color: black;
+    }
+
+    .row {
+        display: grid;
+        grid-template-columns: repeat(1fr 1fr);
+    }
+
+    .campus h1 {
+        font-size: 2.4rem;
+        padding-bottom: 9px;
+    }
+
+    .campus-col {
+        border-radius: 10px;
+        margin: 74px 51px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .campus-col img {
+        width: 100%;
+        display: block;
+    }
+
+    .layer {
+        background: transparent;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: 0.5s;
+
+    }
+
+    .layer:hover {
+        background: rgba(178, 116, 116, 0.364);
+        backdrop-filter: blur(10px);
+    }
+
+    .layer h2 {
+        color: rgba(0, 0, 0, 0);
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        transition: 1s;
+    }
+
+    .layer:hover h2 {
+        color: white;
+        bottom: 49%;
+        opacity: 1;
+    }
+
+    footer {
+        text-align: center;
+        padding: 8px;
+        color: white;
+        background-color: black;
+
+    }
+</style>
+
+<body>
+    <section class="inner-banner">
+
+
+        <nav>
+            <a href="index.html"><img src="assets/logo.webp" alt="logo"></a>
+            <div class="nav-links" id="navLinks">
+                <ul>
+                    <li class="list"><a href="indexx.html" target="_blank">HOME</a></li>
+                    <li class="list"><a href="indexx.html" target="_blank">MENU</a></li>
+                    <li class="list"><a href="reservion.html" target="_blank">RESERVATION</a></li>
+                    <li class="list"><a href="gallery.html">GALLERY</a></li>
+                </ul>
+            </div>
+        </nav>
+
+
+        </div>
+        <div class="auto-container">
+            <div class="inner">
+                <div class="subtitle"><span>our story of </span></div>
+                <div class="pattern-image"><img src="assets/separator.svg" alt="gallery"></div>
+                <h1>Gallery</h1>
+            </div>
+        </div>
+
+    </section>
+    <div class="separation"></div>
+
+    <!-- ____________________________campus__________________ -->
+    <section class="campus">
+        <h1>OUR GALLERY & EVENTS </h1>
+
+        <div class="row">
+            <div class="campus-col">
+                <img src="assets/gallery1.avif" alt="none">
+                <div class="layer">
+
+                </div>
+            </div>
+            <div class="campus-col">
+                <img src="assets/gallery2.avif" alt="none">
+                <div class="layer">
+
+                </div>
+            </div>
+            <div class="campus-col">
+                <img src="assets/gallery3.avif" alt="none">
+                <div class="layer">
+
+                </div>
+            </div>
+            <div class="campus-col">
+                <img src="assets/Gllery4.avif" alt="none">
+                <div class="layer">
+
+                </div>
+            </div>
+            <div class="campus-col">
+                <img src="assets/gallery5.avif" alt="none">
+                <div class="layer">
+
+                </div>
+            </div>
+            <div class="campus-col">
+                <img src="assets/gallery6.avif" alt="none">
+                <div class="layer">
+
+                </div>
+            </div>
+            <div class="campus-col">
+                <img src="assets/gallery7.jpg" alt="none">
+                <div class="layer">
+
+                </div>
+            </div>
+            <div class="campus-col">
+                <img src="assets/gallery8.jpg" alt="none">
+                <div class="layer">
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2024 Restaurant. All Rights Reserved.</p>
+    </footer>
+
+</body>
+
+</html>

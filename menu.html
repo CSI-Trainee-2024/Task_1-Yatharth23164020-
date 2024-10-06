@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant - Menu</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Menu Page Styles */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            overflow: hidden;
+            background: url("assets/photo_2024-10-05_16-11-20.jpg");
+            /* color: black; */
+            padding: 2em 0;
+            text-align: center;
+            background-repeat: no-repeat;
+            background-position: bottom center;
+            background-size: cover;
+            min-width: auto;
+            min-height: 300px;
+            position: relative;
+            background-attachment: fixed;
+        }
+
+        h1 {
+            font-size: 2.5em;
+        }
+
+        nav {
+            z-index: 1;
+            position: sticky;
+            display: flex;
+            justify-content: space-evenly;
+            padding: 12px 12px;
+            align-items: center;
+            background-color: rgba(128, 128, 128, 0.441);
+            border-radius: 12px;
+            margin-top: 5px;
+            width: 100%;
+
+        }
+
+        nav img {
+            width: 50px;
+            border-radius: 16px;
+        }
+
+        .nav-links {
+            flex: 1;
+            /* align-items: center; */
+        }
+
+        .nav-links ul li {
+            list-style: none;
+            display: inline-block;
+            padding: 12px 23px;
+            position: relative;
+            left: 130px;
+        }
+
+        .nav-links ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.3rem;
+            font-family: 'Josefin Sans', sans-serif;
+        }
+
+        .nav-links ul li::after {
+            content: '';
+            width: 0%;
+            height: 2px;
+            background: #bf0404;
+            display: block;
+            margin: auto;
+            transition: 0.5s;
+        }
+
+        .nav-links ul li:hover::after {
+            width: 100%;
+        }
+
+
+        .menu {
+            text-align: center;
+            padding: 20px;
+            font-size: 32px;
+        }
+
+        .separation {
+            height: 7px;
+            background-color: rgb(46, 44, 44);
+            position: relative;
+            z-index: 20;
+        }
+
+        .all {
+            z-index: -1;
+            background-image: radial-gradient(#00000049 2px, transparent 2px), radial-gradient(#01070b48 2px, transparent 2px);
+            background-size: 99px 99px;
+            background-position: 0 0, 49.5px 49.5px;
+            background-color: #E4E4ED;
+        }
+
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            padding: 2em;
+            /* background-color: #f9f9f9; */
+        }
+
+        .menu-category {
+            z-index: 2;
+            /* background-color: rgba(0, 0, 0, 0.378); */
+            width: 600px;
+            /* border: 3px solid rebeccapurple; */
+            box-shadow: 10px 5px 5px #33302f3b;
+            margin-bottom: 2em;
+            /* padding: 8em; */
+            border-bottom: 2px solid #ddd;
+        }
+
+        .menu-category h1 {
+
+            margin-bottom: 1em;
+            color: #333;
+            text-align: center;
+        }
+
+        .menu-item {
+            margin: 1em 0;
+            padding-left: 1em;
+        }
+
+        .menu-item h3 {
+            font-size: 1.5em;
+            color: #333;
+        }
+
+        .menu-item p {
+            display: inline;
+            font-size: 1em;
+            color: #666;
+        }
+
+        .price {
+            font-weight: bold;
+            color: #333;
+            float: right;
+            padding-right: 1em;
+        }
+
+        /* Footer Styles */
+        footer {
+            text-align: center;
+            background-color: #333;
+            color: white;
+            padding: 1em 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+
+        <nav>
+            <a href="index.html"><img src="assets/logo.webp" alt="logo"></a>
+            <div class="nav-links" id="navLinks">
+                <ul>
+                    <li class="list"><a href="indexx.html" target="_blank">HOME</a></li>
+                    <li class="list"><a href="menu.html">MENU</a></li>
+                    <li class="list"><a href="reservion.html" target="_blank">RESERVATION</a></li>
+                    <li class="list"><a href="gallery.html" target="_blank">GALLERY</a></li>
+                </ul>
+            </div>
+        </nav>
+
+
+
+    </header>
+    <div class="separation"></div>
+    <div class="all">
+
+        <div class="menu">
+            <h1>Our Menu <br></h1>
+        </div>
+
+        <main>
+
+            <section class="menu-category">
+
+                <h1>Appetizers</h1>
+                <div class="menu-item">
+                    <h3>Bruschetta</h3>
+                    <p>Grilled bread topped with fresh tomatoes, garlic, and basil</p>
+                    <span class="price">$8.00</span>
+                </div>
+                <div class="menu-item">
+                    <h3>Stuffed Mushrooms</h3>
+                    <p>Mushrooms filled with a blend of cheeses and herbs</p>
+                    <span class="price">$9.00</span>
+                </div>
+                <div class="menu-item">
+                    <h3>Butternut Squash Kebab</h3>
+                    <p>Seed Crackers, Tamarind Glaze, Roots & Murraba</p>
+                    <span class="price">$10.00</span>
+                </div>
+            </section>
+
+            <section class="menu-category">
+                <h1>Burger</h1>
+                <div class="menu-item">
+                    <h3>Beetroot & Madras Curry Vegetables</h3>
+                    <p>With Avocado Chutney</p>
+                    <span class="price">$10.00</span>
+                </div>
+                <div class="menu-item">
+                    <h3>Peri-peri Chicken 2 Ways & Manchego</h3>
+                    <p>Gorgonzola & Wasabi Hints</p>
+                    <span class="price">$9.00</span>
+                </div>
+                <div class="menu-item">
+                    <h3>Ground Tenderloin & Aged Cheddar </h3>
+                    <p>Hot & Sweet Relish</p>
+                    <span class="price">$12.00</span>
+                </div>
+            </section>
+
+            <section class="menu-category">
+                <h1>Sushi, Sashimi & Rolls</h1>
+                <div class="menu-item">
+                    <h3>Spicy Shitake Tempura & Takuwan Sushi Roll (8pcs) </h3>
+                    <p>Warm chocolate cake with a gooey chocolate center.</p>
+                    <span class="price">$10.00</span>
+                </div>
+                <div class="menu-item">
+                    <h3>Cucumber Avocado Roll </h3>
+                    <p>Truffle & Emmental Cheese</p>
+                    <span class="price">$12.00</span>
+                </div>
+                <div class="menu-item">
+                    <h3>Kimchi Avocado & Takuwan </h3>
+                    <p>Burnt Onion & Tanuki</p>
+                    <span class="price">$19.00</span>
+                </div>
+            </section>
+
+            <section class="menu-category">
+                <h1>Main Courses</h1>
+                <div class="menu-item">
+                    <h3>Grilled Salmon</h3>
+                    <p>Fresh salmon fillet grilled to perfection with a lemon butter sauce.</p>
+                    <span class="price">$22.00</span>
+                </div>
+                <div class="menu-item">
+                    <h3>Pasta Primavera</h3>
+                    <p>Seasonal vegetables tossed with penne pasta and garlic sauce.</p>
+                    <span class="price">$28.00</span>
+                </div>
+                <div class="menu-item">
+                    <h3>Age Dashi Tofu</h3>
+                    <p>Yuzu & Green Mango Sauce, Warm Edamame & Quinoa</p>
+                    <span class="price">$24.00</span>
+                </div>
+            </section>
+
+            <section class="menu-category">
+                <h1>Desserts</h1>
+                <div class="menu-item">
+                    <h3>Chocolate Lava Cake</h3>
+                    <p>Warm chocolate cake with a gooey chocolate center.</p>
+                    <span class="price">$10.00</span>
+                </div>
+                <div class="menu-item">
+                    <h3>Tiramisu</h3>
+                    <p>Classic Italian dessert made with coffee and mascarpone cheese.</p>
+                    <span class="price">$9.00</span>
+                </div>
+                <div class="menu-item">
+                    <h3>Miso Caramel Chocolate Fondant</h3>
+                    <p>Sesame Ice Cream</p>
+                    <span class="price">$21.00</span>
+                </div>
+            </section>
+
+            <section class="menu-category">
+                <h1>Beverages</h1>
+                <div class="menu-item">
+                    <h3>Limon C U Later</h3>
+                    <p>Vodka, Limoncello, Blueberry Simple Syrup, Lemon, Prosecco</p>
+                    <span class="price">$8.00</span>
+                </div>
+                <div class="menu-item">
+                    <h3>Fig Story</h3>
+                    <p>Gin, Campari, Fig Shrub, Green Grapes, Lemon</p>
+                    <span class="price">$9.25</span>
+                </div>
+                <div class="menu-item">
+                    <h3>Chai Bella</h3>
+                    <p>Dewars White Label Scotch, Domaine de Canton, Chai Tea, Lemon $</p>
+                    <span class="price">$12.00</span>
+                </div>
+            </section>
+
+
+        </main>
+    </div>
+
+
+    <footer>
+        <p>© 2024 Restaurant</p>
+    </footer>
+</body>
+
+</html>

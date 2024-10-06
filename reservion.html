@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservation</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        main {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.391), rgba(0, 0, 0, 0.268)), url("https://img.freepik.com/premium-photo/blurred-restaurant-background_893571-15162.jpg?w=740");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+
+            width: 100vw;
+            height: 100vh;
+        }
+
+
+        nav {
+            z-index: 1;
+            position: fixed;
+            display: flex;
+            justify-content: space-evenly;
+            padding: 12px 12px;
+            align-items: center;
+            background-color: rgba(128, 128, 128, 0.441);
+            border-radius: 12px;
+            margin-top: 10px;
+            width: 100%;
+
+        }
+
+        nav img {
+            width: 50px;
+            border-radius: 16px;
+        }
+
+        .nav-links {
+            flex: 1;
+            /* align-items: center; */
+        }
+
+        .nav-links ul li {
+            list-style: none;
+            display: inline-block;
+            padding: 12px 23px;
+            position: relative;
+            left: 130px;
+        }
+
+        .nav-links ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.3rem;
+            font-family: 'Josefin Sans', sans-serif;
+        }
+
+        .nav-links ul li::after {
+            content: '';
+            width: 0%;
+            height: 2px;
+            background: #bf0404;
+            display: block;
+            margin: auto;
+            transition: 0.5s;
+        }
+
+        .nav-links ul li:hover::after {
+            width: 100%;
+        }
+
+
+
+        .cont {
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            /* position: absolute;
+            top: 10%;
+            left: 25%; */
+
+
+        }
+
+        .cont h1 {
+            margin-top: 80px;
+            /* position: relative;
+            top: 30px;
+            bottom: 30px; */
+            font-size: 60px;
+            padding-bottom: 30px;
+            color: white;
+
+        }
+
+        .reserv {
+            display: flex;
+            justify-content: center;
+            background-color: #0000007c;
+            padding: 40px;
+            border-radius: 10px;
+            top: 50%;
+            box-shadow: -1px 1px 29px 16px rgb(0 0 0);
+            width: fit-content;
+            text-align: center;
+        }
+
+        .input-gp {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .reservation-form label {
+            font-size: larger;
+            display: block;
+            /* text-align: left; */
+            /* margin: 10px 0 5px; */
+            color: #fbf9f9;
+            width: 190px;
+        }
+
+        .reservation-form input {
+            width: 80%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #fff4f4;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+        input[type="date"],
+        input[type="time"] {
+            padding: 8px;
+            font-size: 14px;
+        }
+
+        .dateTime {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .dateTime div {
+            flex: 1;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .dateTime div:first-child {
+            margin-right: 20px;
+            /* Adds space between Date and Time */
+        }
+
+
+        .submit-btn {
+            background-color: #28a745;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .submit-btn:hover {
+            background-color: #218838;
+        }
+
+        @media screen and (max-width:1000px) {
+            .reservation-form input {
+                width: 33%;
+            }
+
+            .dateTime {
+                display: inline;
+            }
+
+            .cont h1 {
+                font-size: 40px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+
+        <nav>
+            <a href="index.html"><img src="assets/logo.webp" alt="logo"></a>
+            <div class="nav-links" id="navLinks">
+                <ul>
+                    <li class="list"><a href="indexx.html" target="_blank">HOME</a></li>
+                    <li class="list"><a href="menu.html" target="_blank">MENU</a></li>
+                    <li class="list"><a href="reservion.html">RESERVATION</a></li>
+                    <li class="list"><a href="gallery.html" target="_blank">GALLERY</a></li>
+                </ul>
+            </div>
+        </nav>
+
+
+        <div class="cont">
+            <h1>RESERVATION</h1>
+            <!-- <div><img src="https://cdn.pixabay.com/photo/2020/02/01/06/13/vegan-4809593_960_720.jpg" alt="img"></div> -->
+            <div class="reserv">
+                <form action="#" method="POST" class="reservation-form">
+                    <div class="input-gp">
+
+                        <label for="name">Full Name:</label>
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="input-gp">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="input-gp">
+
+
+                        <label for="phone">Phone Number:</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required>
+                    </div>
+                    <div class="input-gp">
+
+
+                        <label for="people">Number of People:</label>
+                        <input type="number" id="people" name="people" min="1" max="20" value="2" required>
+                    </div>
+                    <div class=" input-gp dateTime">
+
+                        <div>
+
+
+                            <label for="date">Date:</label>
+                            <input type="date" id="date" name="date" required>
+                        </div>
+                        <div>
+
+
+                            <label for="time">Time:</label>
+                            <input type="time" id="time" name="time" required>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Reserve Table</button>
+                </form>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

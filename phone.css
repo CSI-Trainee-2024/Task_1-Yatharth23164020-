@@ -1,0 +1,24 @@
+#navbar{
+    flex-direction: column;
+    width: 846px;
+}
+#navbar ul{
+    position: relative;
+    left: -41px;
+}
+#navbar ul li a{
+    margin: 1px -9px;
+    padding: 8px 19px;
+}
+    #navbar ul {
+        margin: 12px 5px;}
+.sign{
+    left: 37px;
+}
+#services{
+    display: flex;
+    flex-direction: column;
+}
+.clints{
+    overflow: hidden;
+}
